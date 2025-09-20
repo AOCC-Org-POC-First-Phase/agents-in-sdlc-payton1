@@ -5,12 +5,98 @@ import "../styles/global.css";
 ---
 
 <Layout title="Tailspin Toys - Crowdfunding your new favorite game!">
-  <div class="py-8">
-    <div class="max-w-3xl mb-10">
-      <h1 class="text-4xl font-bold mb-4 text-slate-100">Welcome to Tailspin Toys</h1>
-      <p class="text-xl text-slate-300">Find your next game! And maybe even back one! Explore our collection!</p>
-    </div>
+  <!-- Enhanced Hero Section -->
+  <div class="relative overflow-hidden">
+    <!-- Gradient Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-slate-900/20"></div>
     
-    <GameList client:only="svelte" />
+    <!-- Decorative Elements -->
+    <div class="absolute top-20 right-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-40 left-10 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-20 right-1/4 w-20 h-20 bg-cyan-500/10 rounded-full blur-xl"></div>
+    
+    <div class="relative py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Main Hero Content -->
+        <div class="text-center mb-16">
+          <div class="mb-6">
+            <!-- Game Controller Icon -->
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mb-6 shadow-lg shadow-blue-500/25">
+              <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 11-2 0 1 1 0 012 0zm-4 0a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </div>
+          
+          <h1 class="text-5xl md:text-6xl font-bold mb-6 text-slate-100">
+            Welcome to 
+            <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Tailspin Toys
+            </span>
+          </h1>
+          
+          <p class="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Discover amazing games and support indie developers! 
+            <span class="text-blue-400 font-semibold">Fund the future of gaming</span> with our developer-friendly crowdfunding platform.
+          </p>
+          
+          <!-- Call to Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 transform hover:scale-105">
+              <span class="flex items-center">
+                Explore Games
+                <svg class="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+              </span>
+            </button>
+            
+            <button class="px-8 py-4 border-2 border-slate-600 hover:border-blue-400 text-slate-300 hover:text-blue-400 font-semibold rounded-xl transition-all duration-300 transform hover:scale-105">
+              How It Works
+            </button>
+          </div>
+        </div>
+        
+        <!-- Feature Highlights -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="text-center group">
+            <div class="inline-flex items-center justify-center w-14 h-14 bg-blue-900/50 rounded-lg mb-4 group-hover:bg-blue-800/50 transition-colors">
+              <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-200 mb-2">Fast Funding</h3>
+            <p class="text-slate-400 text-sm">Quick and secure funding for game developers worldwide</p>
+          </div>
+          
+          <div class="text-center group">
+            <div class="inline-flex items-center justify-center w-14 h-14 bg-purple-900/50 rounded-lg mb-4 group-hover:bg-purple-800/50 transition-colors">
+              <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-200 mb-2">Community Driven</h3>
+            <p class="text-slate-400 text-sm">Connect with passionate gamers and developers</p>
+          </div>
+          
+          <div class="text-center group">
+            <div class="inline-flex items-center justify-center w-14 h-14 bg-cyan-900/50 rounded-lg mb-4 group-hover:bg-cyan-800/50 transition-colors">
+              <svg class="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-200 mb-2">Trusted Platform</h3>
+            <p class="text-slate-400 text-sm">Secure, transparent, and developer-friendly</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Games Section -->
+  <div class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <GameList client:only="svelte" />
+    </div>
   </div>
 </Layout>
