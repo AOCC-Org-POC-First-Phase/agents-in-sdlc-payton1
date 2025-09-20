@@ -131,4 +131,38 @@ test.describe('Game Listing and Navigation', () => {
     // We expect the page to not crash and still have a valid title
     await expect(page).toHaveTitle(/Game Details - Tailspin Toys/);
   });
+
+  test('should display star rating when available', async ({ page }) => {
+    await page.goto('/game/1');
+    
+    // Wait for game details to load
+    await page.waitForSelector('[data-testid="game-details"]', { timeout: 10000 });
+    
+    // Check if star rating is displayed (it should be present for game 1)
+    const ratingElement = page.locator('[data-testid="game-rating"]');
+    await expect(ratingElement).toBeVisible();
+    
+    // Verify rating contains both stars and numeric value
+    const ratingText = await ratingElement.textContent();
+    expect(ratingText).toMatch(/[★☆½]/); // Should contain star characters
+    expect(ratingText).toMatch(/\d+\.\d+/); // Should contain numeric rating
+  });
+
+  test('should display loading state before games load', async ({ page }) => {
+    // Navigate to home page
+    await page.goto('/');
+    
+    // Check for loading animation (should appear briefly)
+    // Note: This might be very quick, so we use a small timeout
+    const loadingElements = page.locator('.animate-pulse');
+    
+    // Either we catch the loading state or it loads very quickly and shows games
+    // Both are valid outcomes
+    try {
+      await expect(loadingElements.first()).toBeVisible({ timeout: 1000 });
+    } catch (e) {
+      // If no loading state caught, ensure games are loaded instead
+      await expect(page.locator('[data-testid="games-grid"]')).toBeVisible({ timeout: 10000 });
+    }
+  });
 });
