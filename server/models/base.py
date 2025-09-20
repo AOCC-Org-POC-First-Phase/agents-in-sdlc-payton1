@@ -6,6 +6,21 @@ class BaseModel(db.Model):
     
     @staticmethod
     def validate_string_length(field_name, value, min_length=2, allow_none=False):
+        """
+        Validate string field length and format.
+        
+        Args:
+            field_name (str): Name of the field being validated
+            value (str|None): Value to validate
+            min_length (int): Minimum required length for the string
+            allow_none (bool): Whether None values are allowed
+            
+        Returns:
+            str: The validated string value
+            
+        Raises:
+            ValueError: If validation fails
+        """
         if value is None:
             if allow_none:
                 return value

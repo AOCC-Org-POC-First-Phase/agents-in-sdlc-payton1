@@ -1,3 +1,7 @@
+<!--
+GameDetails Svelte component for the Tailspin Toys Crowd Funding platform.
+This component displays detailed information for a specific game including ratings, category, and publisher info.
+-->
 <script lang="ts">
     import { onMount } from "svelte";
     
@@ -52,6 +56,12 @@
         }
     });
 
+    /**
+     * Render star rating as visual stars with half-star support.
+     * 
+     * @param rating - Numeric rating value (0-5) or null
+     * @returns String representation of stars or "Not yet rated" for null values
+     */
     // Function to render stars based on rating
     function renderStarRating(rating: number | null): string {
         if (rating === null) return "Not yet rated";
