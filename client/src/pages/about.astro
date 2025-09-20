@@ -4,27 +4,115 @@ import "../styles/global.css";
 ---
 
 <Layout title="About - Tailspin Toys">
-  <section class="max-w-5xl mx-auto px-4 py-8">
-    <div class="bg-slate-800/70 backdrop-blur-sm border border-slate-700 rounded-xl shadow-lg p-8 transition-colors duration-300">
-      <h2 class="text-blue-400 text-4xl mb-8 pb-3 border-b border-slate-600 font-bold">About Tailspin Toys</h2>
-      
-      <div class="space-y-6">
-        <p class="text-lg leading-relaxed text-slate-300">
-          Tailspin Toys is the premier crowdfunding platform dedicated to bringing board games with a development and DevOps twist to life. We believe that the same collaborative spirit, iteration cycles, and problem-solving that power modern software teams can make for endlessly engaging tabletop experiences. By focusing exclusively on games that explore themes like continuous integration, agile planning, container orchestration, and incident response, we offer a unique space where both seasoned developers and curious newcomers can back - and even contribute to - the games they're most passionate about.
-        </p>
+  <!-- Enhanced About Hero Section -->
+  <div class="relative overflow-hidden">
+    <!-- Gradient Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-slate-900/20"></div>
+    
+    <!-- Decorative Elements -->
+    <div class="absolute top-20 right-10 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl"></div>
+    
+    <div class="relative py-16 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <!-- Icon -->
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mb-6 shadow-lg shadow-blue-500/25">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
         
-        <p class="text-lg leading-relaxed text-slate-300">
-          Our platform empowers creators at every stage of the design journey. From early-concept sketches through final prototype testing, Tailspin Toys provides tools for community feedback, stretch-goal planning, and beta-play sessions. Backers can join forums to share house rules, vote on art directions, or fund expansion modules that introduce new mechanics like "pipeline bottleneck" challenges or "rollback" rescue cards. We handle all the logistics of manufacturing and fulfillment, so designers can focus on the fun stuff - and supporters can look forward to high-quality components delivered right to their door.
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-slate-100">
+          About <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Tailspin Toys</span>
+        </h1>
+        
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-12">
+          Where gaming meets development, and innovation meets community funding.
         </p>
+      </div>
+    </div>
+  </div>
+  
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="bg-slate-800/70 backdrop-blur-sm border border-slate-700 rounded-2xl shadow-xl p-8 md:p-12">
+      <!-- Mission Section -->
+      <div class="mb-12">
+        <div class="flex items-center mb-6">
+          <div class="w-3 h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mr-4"></div>
+          <h2 class="text-blue-400 text-3xl font-bold">Our Mission</h2>
+        </div>
+      
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="space-y-6">
+            <p class="text-lg leading-relaxed text-slate-300">
+              Tailspin Toys is the premier crowdfunding platform dedicated to bringing board games with a development and DevOps twist to life. We believe that the same collaborative spirit, iteration cycles, and problem-solving that power modern software teams can make for endlessly engaging tabletop experiences.
+            </p>
+            
+            <p class="text-lg leading-relaxed text-slate-300">
+              By focusing exclusively on games that explore themes like continuous integration, agile planning, container orchestration, and incident response, we offer a unique space where both seasoned developers and curious newcomers can back - and even contribute to - the games they're most passionate about.
+            </p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-blue-900/30 to-purple-900/20 rounded-xl p-6 border border-blue-500/20">
+            <h3 class="text-xl font-semibold text-blue-400 mb-4">Why Choose Tailspin Toys?</h3>
+            <ul class="space-y-3 text-slate-300">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Developer-focused game themes
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Community-driven development
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Transparent funding process
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Platform Features Section -->
+      <div class="mb-12">
+        <div class="flex items-center mb-6">
+          <div class="w-3 h-8 bg-gradient-to-b from-purple-500 to-cyan-500 rounded-full mr-4"></div>
+          <h2 class="text-purple-400 text-3xl font-bold">Platform Features</h2>
+        </div>
+        
+        <div class="space-y-6">
+          <p class="text-lg leading-relaxed text-slate-300">
+            Our platform empowers creators at every stage of the design journey. From early-concept sketches through final prototype testing, Tailspin Toys provides tools for community feedback, stretch-goal planning, and beta-play sessions.
+          </p>
+          
+          <p class="text-lg leading-relaxed text-slate-300">
+            Backers can join forums to share house rules, vote on art directions, or fund expansion modules that introduce new mechanics like "pipeline bottleneck" challenges or "rollback" rescue cards. We handle all the logistics of manufacturing and fulfillment, so designers can focus on the fun stuff - and supporters can look forward to high-quality components delivered right to their door.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Story Section -->
+      <div class="mb-12">
+        <div class="flex items-center mb-6">
+          <div class="w-3 h-8 bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full mr-4"></div>
+          <h2 class="text-cyan-400 text-3xl font-bold">Our Story</h2>
+        </div>
 
         <p class="text-lg leading-relaxed text-slate-300">
           The name "Tailspin Toys" reflects our love of both flight metaphors and that moment when a project takes on a life of its own - spinning through sprints, releases, and hotfixes until it soars. Founded by a team of developers who were always gamers at heart, we know firsthand how satisfying it is to conquer a tricky bug or pull off a flawless deployment - and how much more rewarding it can be to do beat your friends on a table (or work with them cooperatively to win together). Whether you're here to back your next favorite game or to launch your own DevOps-inspired design, welcome aboard. Let's game from here, together!
         </p>
       </div>
       
+      <!-- Enhanced Back Button -->
       <div class="mt-12 flex justify-center">
-        <a href="/" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/20 flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <a href="/" class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 transform hover:scale-105 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 transform transition-transform duration-300 group-hover:-translate-x-1" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
           </svg>
           Back to Games

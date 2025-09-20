@@ -2,23 +2,71 @@
 // Import any necessary dependencies
 ---
 
-<header class="bg-blue-500 dark:bg-blue-700 text-white p-4 shadow-md transition-colors duration-300">
-  <div class="container mx-auto flex justify-between items-center pl-4 pr-4">
+<header class="relative bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 shadow-xl">
+  <!-- Gradient overlay for visual depth -->
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-purple-900/5 to-slate-900/10"></div>
+  
+  <div class="relative container mx-auto flex justify-between items-center pl-4 pr-4 py-4">
     <div class="flex items-center">
       <div class="relative group">
-        <button id="menu-toggle" class="focus:outline-none mr-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button id="menu-toggle" class="focus:outline-none mr-4 p-2 rounded-lg hover:bg-slate-800/50 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-300 hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        <nav id="menu" class="hidden absolute left-0 mt-2 w-48 bg-white dark:bg-slate-800 text-slate-800 dark:text-white rounded shadow-lg z-10 transition-colors duration-300">
-          <ul class="py-1">
-            <li><a href="/" class="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700">Home</a></li>
-            <li><a href="/about" class="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-700">About</a></li>
+        <nav id="menu" class="hidden absolute left-0 mt-2 w-52 bg-slate-800/95 backdrop-blur-sm border border-slate-700 text-slate-200 rounded-xl shadow-2xl z-10 overflow-hidden">
+          <ul class="py-2">
+            <li>
+              <a href="/" class="flex items-center px-4 py-3 hover:bg-slate-700/50 hover:text-blue-400 transition-all duration-200">
+                <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/about" class="flex items-center px-4 py-3 hover:bg-slate-700/50 hover:text-blue-400 transition-all duration-200">
+                <svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                About
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
-      <h1 class="text-xl font-bold"><a href="/" class="hover:underline">Tailspin Toys</a></h1>
+      
+      <!-- Enhanced Logo/Brand -->
+      <div class="flex items-center">
+        <!-- Logo Icon -->
+        <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 11-2 0 1 1 0 012 0zm-4 0a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        
+        <h1 class="text-xl font-bold">
+          <a href="/" class="hover:text-blue-400 transition-colors duration-200 flex items-center">
+            <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Tailspin</span>
+            <span class="text-white ml-1">Toys</span>
+          </a>
+        </h1>
+      </div>
+    </div>
+    
+    <!-- Additional Header Elements -->
+    <div class="hidden md:flex items-center space-x-6">
+      <nav class="flex items-center space-x-6">
+        <a href="/" class="text-slate-300 hover:text-blue-400 transition-colors duration-200 font-medium">Games</a>
+        <a href="/about" class="text-slate-300 hover:text-blue-400 transition-colors duration-200 font-medium">About</a>
+      </nav>
+      
+      <!-- Search Button (placeholder) -->
+      <button class="p-2 rounded-lg hover:bg-slate-800/50 text-slate-400 hover:text-blue-400 transition-colors duration-200">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
