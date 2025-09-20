@@ -1,3 +1,7 @@
+"""
+Category model for the Tailspin Toys Crowd Funding platform.
+This module defines the Category SQLAlchemy model with validation and serialization methods.
+"""
 from . import db
 from .base import BaseModel
 from sqlalchemy.orm import validates, relationship
@@ -14,16 +18,48 @@ class Category(BaseModel):
     
     @validates('name')
     def validate_name(self, key, name):
+        """
+        Validate category name field.
+        
+        Args:
+            key (str): Field name being validated
+            name (str): Name value to validate
+            
+        Returns:
+            str: Validated name string
+        """
         return self.validate_string_length('Category name', name, min_length=2)
         
     @validates('description')
     def validate_description(self, key, description):
+        """
+        Validate category description field.
+        
+        Args:
+            key (str): Field name being validated
+            description (str|None): Description value to validate
+            
+        Returns:
+            str: Validated description string
+        """
         return self.validate_string_length('Description', description, min_length=10, allow_none=True)
     
     def __repr__(self):
+        """
+        Return string representation of the Category instance.
+        
+        Returns:
+            str: String representation showing category name
+        """
         return f'<Category {self.name}>'
         
     def to_dict(self):
+        """
+        Convert Category instance to dictionary representation.
+        
+        Returns:
+            dict: Dictionary containing category data with game count
+        """
         return {
             'id': self.id,
             'name': self.name,
